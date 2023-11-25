@@ -6,8 +6,10 @@ from selenium.webdriver.common.by import By
 driver = webdriver.Chrome()
 driver.get("https://www.w3schools.com/html/default.asp")
 
-# return type >> List
+# return type of find_elements() >> List
+# TAG_NAME ==> Will locate the elements having particular tag name 
 a_tag_data = driver.find_elements(By.TAG_NAME,"a")
+
 
 # 1,10, [i for i in range(1,11)]
 a_tag_data = [i.text for i in a_tag_data]
@@ -20,5 +22,8 @@ for i in a_tag_data:
 # l1 = []
 # for i in a_tag_data:
 #     l1.append(i.text)
-print(temp)
+print(temp) 
+
+
+
 
